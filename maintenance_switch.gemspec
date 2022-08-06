@@ -2,12 +2,12 @@ require_relative 'lib/maintenance_switch/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "maintenance_switch"
-  spec.version       = MaintenanceMode::VERSION
+  spec.version       = MaintenanceSwitch::VERSION
   spec.authors       = ['ProFinda Development Team']
   spec.email         = ['dev@profinda.com']
 
-  spec.summary       = 'Small gem to put your application on maintenance mode'
-  spec.homepage      = 'https://github.com/Profinda/opera'
+  spec.summary       = 'Small gem to switch your application on maintenance mode'
+  spec.homepage      = 'https://github.com/Profinda/maintenance_switch'
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
