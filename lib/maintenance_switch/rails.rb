@@ -1,6 +1,6 @@
 require_relative "base"
 
-class MaintenanceMode::Railtie < Rails::Railtie
+class MaintenanceSwitch::Railtie < Rails::Railtie
   railtie_name :maintenance_switch
 
   rake_tasks do
@@ -11,6 +11,6 @@ class MaintenanceMode::Railtie < Rails::Railtie
   initializer("maintenance-mode.prepend") do |app|
     next if Rails.env.test?
 
-    app.config.middleware.insert_before(Rack::Timeout, MaintenanceMode::Base)
+    app.config.middleware.insert_before(Rack::Timeout, MaintenanceSwitch::Base)
   end
 end

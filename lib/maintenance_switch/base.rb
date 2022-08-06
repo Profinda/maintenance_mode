@@ -2,7 +2,7 @@
 
 require 'redis'
 
-module MaintenanceMode
+module MaintenanceSwitch
   class Base
     MAINTENANCE_CACHE_KEY = 'MAINTENANCE_KEY'
     DEFAULT_REASON = 'Scheduled maintenance'
