@@ -8,7 +8,7 @@ class MaintenanceSwitch::Railtie < Rails::Railtie
     Dir.glob("#{path}/tasks/**/*.rake").each { |f| load f }
   end
 
-  initializer("maintenance-mode.prepend") do |app|
+  initializer("maintenance-switch.prepend") do |app|
     next if Rails.env.test?
 
     app.config.middleware.insert_before(Rack::Timeout, MaintenanceSwitch::Base)

@@ -1,4 +1,4 @@
-# Maintenance mode Changelog
+# Maintenance switch Changelog
 
 ## 0.1.1 - August 6, 2022
 
