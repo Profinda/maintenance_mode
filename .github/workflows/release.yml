@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Tag automatically
-        run: git tag v`cat lib/maintenance_swtich/version.rb | grep 'VERSION' | awk '{ print $3 $4 }' | sed "s/'//g"`
+        run: git tag v`cat lib/maintenance_switch/version.rb | grep 'VERSION' | awk '{ print $3 $4 }' | sed "s/'//g"`
 
       - name: Push tags
         run: git push origin --tags

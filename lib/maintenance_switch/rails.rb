@@ -1,7 +1,7 @@
 require_relative "base"
 
 class MaintenanceMode::Railtie < Rails::Railtie
-  railtie_name :maintenance_swtich
+  railtie_name :maintenance_switch
 
   rake_tasks do
     path = File.expand_path(__dir__)

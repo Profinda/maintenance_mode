@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "maintenance_swtich"
+require "maintenance_switch"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

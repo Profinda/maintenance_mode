@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    maintenance_swtich (0.1.2)
+    maintenance_switch (0.1.2)
       redis
 
 GEM
@@ -28,7 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  maintenance_swtich!
+  maintenance_switch!
   rake (~> 12.0)
   rspec (~> 3.0)
 

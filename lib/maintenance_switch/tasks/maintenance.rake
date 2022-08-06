@@ -6,17 +6,17 @@ namespace :maintenance do
   desc 'For setting application in maintenance mode'
   task on: :environment do |task, _args|
     say(task, 'Switching maintenance mode on...')
-    reason = ENV.fetch('MAINTENANCE_REASON', MaintenanceMode::DEFAULT_REASON)
+    reason = ENV.fetch('MAINTENANCE_REASON', MaintenanceSwitch::DEFAULT_REASON)
     say(task, "With a reason: #{reason}")
 
     redis = Redis.new(url: ENV.fetch('MAINTENANCE_REDIS_URL'))
-    redis.set(MaintenanceMode::MAINTENANCE_CACHE_KEY, { reason: reason, started_at: Time.now.utc }.to_json)
+    redis.set(MaintenanceSwitch::MAINTENANCE_CACHE_KEY, { reason: reason, started_at: Time.now.utc }.to_json)
   end
 
   task off: :environment do |task, _args|
     say(task, 'Switching maintenance mode off...')
 
     redis = Redis.new(url: ENV.fetch('MAINTENANCE_REDIS_URL'))
-    redis.del(MaintenanceMode::MAINTENANCE_CACHE_KEY)
+    redis.del(MaintenanceSwitch::MAINTENANCE_CACHE_KEY)
   end
 end
