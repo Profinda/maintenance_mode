@@ -1,6 +1,6 @@
-require "maintenance_mode/version"
-require_relative "maintenance_mode/base"
-require_relative "maintenance_mode/rails" if defined?(Rails) && [3,4,5,6].include?(Rails::VERSION::MAJOR)
+require "maintenance_swtich/version"
+require_relative "maintenance_swtich/base"
+require_relative "maintenance_swtich/rails" if defined?(Rails) && [3,4,5,6].include?(Rails::VERSION::MAJOR)
 
 module MaintenanceMode
   class Error < StandardError; end

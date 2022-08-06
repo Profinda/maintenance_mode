@@ -1,7 +1,7 @@
-require_relative 'lib/maintenance_mode/version'
+require_relative 'lib/maintenance_swtich/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "maintenance_mode"
+  spec.name          = "maintenance_swtich"
   spec.version       = MaintenanceMode::VERSION
   spec.authors       = ['ProFinda Development Team']
   spec.email         = ['dev@profinda.com']
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata['changelog_uri'] = 'https://github.com/Profinda/maintenance_mode/blob/master/CHANGELOG.md'
+  spec.metadata['changelog_uri'] = 'https://github.com/Profinda/maintenance_swtich/blob/master/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
